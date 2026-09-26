@@ -15,7 +15,9 @@ app.get('/', (req, res) => {
 });
 
 const authRoutes = require('./routes/auth');
+const postRoutes = require('./routes/posts');
 app.use('/api/auth', authRoutes);
+app.use('/api/posts', postRoutes);
 
 // Database connection and server start
 const PORT = process.env.PORT || 5000;
